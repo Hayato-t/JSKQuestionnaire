@@ -1,0 +1,271 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>時代錯誤社webアンケート</title>
+	<!--<script type="text/javacript" src=""> -->
+	<link type="text/css" rel="stylesheet"
+  href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+    <link type="text/css" rel="stylesheet"
+  href="layout/style.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript"
+  src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  	<script type="text/javascript">
+  	$(function(){
+	  	$("#step1").change(function(){
+  			$("#secondform").show('blind','',500);
+  		});
+	  	$("#step2").change(function(){
+  			$("#thirdform").show('blind','',500);
+  		});
+	  	$("#sb").change(function(){
+	  		if($(this).val() != "" && $("[name = teacher ]").val() != ""){
+	  			$("#fourthform").show('blind','',500);
+	  		}
+  		});
+	  	$("#te").change(function(){
+	  		if($(this).val() != "" && $("[name = subject ]").val() != ""){
+	  			$("#fourthform").show('blind','',500);
+	  		}
+  		});
+	});
+  	</script>
+<body>
+	<div class="main">
+		<div id="title">
+			<h3>逆評定webアンケート</h3>
+		</div>
+		<div id="bd">
+			<p>ここは時代錯誤社が発行する教員教務逆評定用のwebアンケートページです。<br>
+			逆評定は皆様のアンケートを必要としています。ぜひご協力ください。</p>
+			<form>
+				受講学期
+				<select name="semester" id="step1">
+					<option value="" selected>選択してください</option>
+					<option value="2015s">2015年度Sセメスター</option>
+					<option value="2015a">2015年度Aセメスター</option>
+					<option value="2016s">2016年度Sセメスター</option>
+					<option value="2016a">2016年度Aセメスター</option>
+				</select>
+				<div id="secondform">
+					科目群
+					<select name="subgroup" id="step2">
+						<option value="" selected>選択してください</option>
+						<option value="A">総合A</option>
+						<option value="B">総合B</option>
+						<option value="C">総合C</option>
+						<option value="D">総合D</option>
+					</select>
+				</div>
+				<div id="thirdform">
+					科目名
+					<select name="subject" id="sb">
+						<option value="" selected>選択してください</option>
+						<option value="2015s">英語一列</option>
+						<option value="2015a">英語二列</option>
+						<option value="2016s">英語三列</option>
+						<option value="2016a">英語四列</option>
+					</select>
+					教員名
+					<select name="teacher" id="te">
+						<option value="" selected>選択してください</option>
+						<option value="2015s">あすけたろう</option>
+						<option value="2015a">びすけたろう</option>
+						<option value="2016s">しすけたろう</option>
+						<option value="2016a">でぃすけたろう</option>
+					</select>
+					
+				</div>
+				<div id="fourthform">
+					<div id="Qset">
+						<div id="Q">
+			  				貴殿の出席率
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="Attendance" value="8割以上">8割以上</label>
+							<br>
+   							<label><input type="radio" name="Attendance" value="5~8割">5割以上8割未満</label>
+							<br>
+   							<label><input type="radio" name="Attendance" value="2?5割">2割以上5割未満</label>
+    						<br>
+   							<label><input type="radio" name="Attendance" value="2割以下">2割未満</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				評価方法
+			  			</div>
+			  			<div id="A">
+							<label><input type="checkbox" name="Evaluation[]" value="期末テスト" />期末テスト</label>
+							<br>
+   							<label><input type="checkbox" name="Evaluation[]" value="小テスト・中間テスト" />小テスト・中間テスト</label>
+							<br>
+   							<label><input type="checkbox" name="Evaluation[]" value="出席" />出席</label>
+							<br>
+   							<label><input type="checkbox" name="Evaluation[]" value="レポート" />レポート</label>
+							<br>
+   							<label><input type="checkbox" name="Evaluation[]" value="発表" />発表</label>
+ 						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+						    鬼仏度
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="OniHotoke" value="大仏" />大仏</label>
+							<br>
+				   		    <label> <input type="radio" name="OniHotoke" value="仏" />仏 </label>
+							<br>
+   							<label><input type="radio" name="OniHotoke" value="鬼" />鬼 </label>
+							<br>
+   							<label><input type="radio" name="OniHotoke" value="大鬼" />大鬼</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				単位期待度
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="UnitExpectation" value="履修即単位" />履修即単位</label>
+							<br>
+   							<label><input type="radio" name="UnitExpectation" value="楽に取れる" />楽に取れる</label>
+							<br>
+   							<label><input type="radio" name="UnitExpectation" value="それなりに厳しい" />それなりに厳しい</label>
+							<br>
+   							<label><input type="radio" name="UnitExpectation" value="時間を返せ" />時間を返せ</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				得点期待度
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="MarkExpectation" value="優が押しよせる" />優が押し寄せる</label>
+							<br>
+						    <label><input type="radio" name="MarkExpectation" value="優が狙える" />優が狙える</label>
+							<br>
+   							<label><input type="radio" name="MarkExpectation" value="良がやっと" />良がやっと</label>
+							<br>
+   							<label><input type="radio" name="MarkExpectation" value="可しか来ない" />可しか来ない</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				試験等難易度
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="TestDifficulty" value="サルでも解ける" />サルでも解ける</label>
+							<br>
+   							<label><input type="radio" name="TestDifficulty" value="易しい" />易しい</label>
+							<br>
+   							<label><input type="radio" name="TestDifficulty" value="難しい" />難しい</label>
+							<br>
+   							<label><input type="radio" name="TestDifficulty" value="院試並み" />院試並み</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				出欠の頻度
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="AttendCheckFrequency" value="全く取らない" />全く取らない</label>
+							<br>
+   							<label><input type="radio" name="AttendCheckFrequency" value="たまに取る" />たまに取る</label>
+							<br>
+   							<label><input type="radio" name="AttendCheckFrequency" value="だいたい取る" />だいたい取る</label>
+							<br>
+   							<label><input type="radio" name="AttendCheckFrequency" value="毎回取る" />毎回取る</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				予復習の手間
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="Trouble" value="手持ち無沙汰" />手持ち無沙汰</label>
+							<br>
+   							<label><input type="radio" name="Trouble" value="少しはかかる" />少しはかかる</label>
+							<br>
+   							<label><input type="radio" name="Trouble" value="割と大変" />割と大変</label>
+							<br>
+   							<label><input type="radio" name="Trouble" value="殺す気ですか" />殺す気ですか</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				文字での説明
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="WritingPlainness" value="わかりやすい" />わかりやすい</label>
+							<br>
+   							<label><input type="radio" name="WritingPlainness" value="まあわかる" />まあわかる</label>
+							<br>
+   							<label><input type="radio" name="WritingPlainness" value="わかりにくい" />わかりにくい</label>
+							<br>
+   							<label><input type="radio" name="WritingPlainness" value="理解不能" />理解不能</label>
+							<br>
+   							<label><input type="radio" name="WritingPlainness" value="そもそも書かない" />そもそも書かない</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				口頭での説明
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="TalkPlainness" value="わかりやすい" />わかりやすい</label>
+							<br>
+   							<label><input type="radio" name="TalkPlainness" value="まあわかる" />まあわかる</label>
+							<br>
+   							<label><input type="radio" name="TalkPlainness" value="わかりにくい" />わかりにくい</label>
+							<br>
+   							<label><input type="radio" name="TalkPlainness" value="理解不能" />理解不能</label>
+							<br>
+   							<label><input type="radio" name="TalkPlainness" value="そもそも喋らない" />そもそも喋らない</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				講義への熱意
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="Enthusiasm" value="あふれんばかり" />あふれんばかり</label>
+							<br>
+   							<label><input type="radio" name="Enthusiasm" value="まあある" />まあある</label>
+							<br>
+   							<label><input type="radio" name="Enthusiasm" value="ないとは言わない" />ないとは言わない</label>
+							<br>
+   							<label><input type="radio" name="Enthusiasm" value="微塵もない" />微塵もない</label>
+   						</div>
+   					</div>
+					<div id="Qset">
+						<div id="Q">
+			  				授業の推奨度
+			  			</div>
+			  			<div id="A">
+			  				<label><input type="radio" name="Recommendation" value="是非とも取るべき" />是非とも取るべき</label>
+							<br>
+   							<label><input type="radio" name="Recommendation" value="取る価値あり" />取る価値有り</label>
+							<br>
+   							<label><input type="radio" name="Recommendation" value="取る価値なし" />取る価値なし</label>
+							<br>
+   							<label><input type="radio" name="Recommendation" value="取ると後悔する" />取ると後悔する</label>
+   						</div>
+   					</div>
+
+    				良い点
+    				<textarea name="GoodPoint" rows="2" cols="60"></textarea>
+    				<br>
+    				悪い点
+    				<textarea name="BadPoint" rows="2" cols="60"></textarea>
+    				<br>
+    				その他一言
+    				<textarea name="OtherPoint" rows="2" cols="60"></textarea>
+				    <input type="submit" value="自分で書いた内容を良く理解して送信">
+				</div>
+				
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

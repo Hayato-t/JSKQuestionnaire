@@ -1,0 +1,65 @@
+body {
+	background-image: url(../img/b025.jpg);}
+.main {
+    width: 50%;  
+ 	margin: 0 auto;
+	padding: 0;
+}
+#title {
+	background: #CC33E8;
+    width: 100%;  
+	margin: 0;
+}
+#title > h3 {
+	padding: 10px;
+	color: #FFFFFF;
+}
+
+#bd {
+	background: #FFFFFF;
+	width: 100%;
+	margin: 0;
+}
+#bd > p {
+	padding: 10px;
+	margin: 5px;
+}
+#bd form {
+	padding: 10px;
+	margin: 0px;
+}
+#secondform {
+	display: none;
+}
+#thirdform{
+	display: none;
+}
+#fourthform{
+	display: none;
+}
+#fourthform > select{
+	margin: 5px;
+}
+
+#Qset{
+	width: 98%;
+	border: solid #aaaaaa 2px;
+	border-top: solid #aaaaaa 1px;
+	border-bottom: solid #aaaaaa 1px;
+	display: table;
+}
+#Q,#A{
+	display: table-cell;
+
+}
+#Q{
+	width: 50%;
+	background: #EEFFFF;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+#A{
+	width: 50%;
+	background: #FFEEEE;
+
+}
